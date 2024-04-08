@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'dj_rest_auth.registration',
-    'corsheaders',
+    
     
 ]
 REST_FRAMEWORK = {
@@ -76,7 +76,7 @@ MIDDLEWARE = [
 ]
 CORS_ORIGIN_WHITELIST = (
     'https://localhost:3000',
-    'https:/localhost:8000'
+    'https://localhost:8000'
 ) 
 
 CSRF_TRUSTED_ORIGINS = ['https://localhost:3000']
