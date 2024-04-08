@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'dj_rest_auth.registration',
+    'drf_spectacular',
     
     
 ]
@@ -60,8 +61,16 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.TokenAuthentication',
         
-    ]
+    ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',    
 }
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Blog API',
+    'DESCRIPTION': 'Blog API 100% Python, (dev course) ',
+    'VERSION': '1.0.0',
+}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
